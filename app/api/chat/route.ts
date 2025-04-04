@@ -1,9 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getLanguageName } from '@/lib/langaugeDetection';
 
-// Add this export to make the route dynamic
-export const dynamic = 'force-dynamic';
-
 export async function POST(request: Request) {
   try {
     const { messages, languageCode } = await request.json();
